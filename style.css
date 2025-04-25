@@ -1,0 +1,30 @@
+body {
+  background: #111;
+  color: #eee;
+  font-family: monospace;
+  text-align: center;
+}
+
+#game {
+  display: grid;
+  grid-template-columns: repeat(40, 16px);
+  grid-template-rows: repeat(40, 16px);
+  gap: 1px;
+  margin: 0 auto;
+  margin-top: 20px;
+  width: fit-content;
+}
+
+.tile {
+  width: 16px;
+  height: 16px;
+  background: #444;
+}
+
+.player {
+  background: lime;
+}
+
+.mined {
+  background: #222;
+}
