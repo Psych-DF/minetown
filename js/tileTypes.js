@@ -1,5 +1,8 @@
 // js/tileTypes.js
 export function getRandomTileType() {
   const rand = Math.random();
-  return rand < 0.2 ? 'ore' : 'dirt'; // 20% ore
+
+  if (rand < 0.05) return "gold";       // rare, big reward
+  if (rand < 0.25) return "ore";        // common reward
+  return "dirt";                        // basic tile
 }
