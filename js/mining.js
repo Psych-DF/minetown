@@ -10,7 +10,9 @@ export function mineTile(x, y) {
   const { time, reward } = getMiningProperties(type);
 
   // Start delayed mining
-  tile.classList.add("mining");
+tile.classList.add("mining");
+
+requestAnimationFrame(() => {
   setTimeout(() => {
     tile.dataset.mined = "true";
     tile.classList.remove("mining");
@@ -18,9 +20,9 @@ export function mineTile(x, y) {
 
     player.ore += reward;
     document.getElementById("ore-count").textContent = player.ore;
-
-    console.log(`Mined ${type}. +${reward} ore.`);
   }, time);
+});
+
 }
 function getMiningProperties(type) {
   switch (type) {
