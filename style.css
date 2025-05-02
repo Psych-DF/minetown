@@ -19,6 +19,7 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: auto;
+  cursor: none;
   scrollbar-width: none;        /* Firefox */
   -ms-overflow-style: none;     /* IE and Edge */
   position: relative;
