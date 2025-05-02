@@ -1,8 +1,7 @@
 // js/game.js
-import { createGrid } from './grid.js';
+import { createGrid, gridWidth, gridHeight } from './grid.js';
 import { player } from './player.js';
 import { mineTile } from './mining.js';
-import { gridWidth, gridHeight } from './grid.js';
 
 let mineTimeout = null;
 
@@ -19,44 +18,60 @@ export function initGame() {
 
   createGrid(gameContainer);
   updatePlayerPosition();
+  centerCameraOnPlayer();
 
   document.addEventListener("keydown", handleKeyDown);
   document.addEventListener("keyup", handleKeyUp);
 }
 
 function updatePlayerPosition() {
+  // Remove old player marker
   document.querySelectorAll(".player").forEach((el) => el.classList.remove("player"));
+
+  // Add .player class to the tile the player is on
   const tile = document.querySelector(`.tile[data-x="${player.x}"][data-y="${player.y}"]`);
   if (tile) tile.classList.add("player");
+}
+
+function centerCameraOnPlayer() {
+  const tile = document.querySelector(`.tile[data-x="${player.x}"][data-y="${player.y}"]`);
+  if (tile) {
+    tile.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+      inline: "center"
+    });
+  }
 }
 
 function handleKeyDown(e) {
   if (e.repeat) return;
 
-switch (e.key) {
-  case "ArrowUp":
-    if (player.y > 0) player.y--;
-    break;
-  case "ArrowDown":
-    if (player.y < gridHeight - 1) player.y++;
-    break;
-  case "ArrowLeft":
-    if (player.x > 0) player.x--;
-    break;
-  case "ArrowRight":
-    if (player.x < gridWidth - 1) player.x++;
-    break;
-  case " ":
-    if (!mineTimeout) {
-      mineTimeout = setTimeout(() => {
-        mineTile(player.x, player.y);
-        mineTimeout = null;
-      }, 1000);
-    }
-    break;
-}
+  switch (e.key) {
+    case "ArrowUp":
+      if (player.y > 0) player.y--;
+      break;
+    case "ArrowDown":
+      if (player.y < gridHeight - 1) player.y++;
+      break;
+    case "ArrowLeft":
+      if (player.x > 0) player.x--;
+      break;
+    case "ArrowRight":
+      if (player.x < gridWidth - 1) player.x++;
+      break;
+    case " ":
+      if (!mineTimeout) {
+        mineTimeout = setTimeout(() => {
+          mineTile(player.x, player.y);
+          mineTimeout = null;
+        }, 1000);
+      }
+      break;
+  }
 
   updatePlayerPosition();
+  centerCameraOnPlayer();
 }
 
 function handleKeyUp(e) {
