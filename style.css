@@ -50,7 +50,7 @@ body {
 .player {
   background: white;
   outline: 1px solid white;
-  box-shadow: 0 0 4px 4px white;
+  box-shadow: 0 0 2px 2px white;
   z-index: 10; /* doesn't affect layout since you're not nesting */
 }
 
@@ -116,7 +116,7 @@ background-color: lime;
 }
 
 .tile[data-type="rock"] {
-  background-color: #272121;
+  background-color: #000000;
 }
 
 /* AFTER MINING CODE */
