@@ -104,6 +104,5 @@ background-color: lime;
 
 .tile.mined[data-type="gold"] {
   background: linear-gradient(135deg, gold, orange);
-  border: 1px solid #ffcc00;
 }
 
