@@ -3,7 +3,7 @@ import { player } from './player.js';
 
 function getMiningProperties(type) {
   switch (type) {
-    case "dirt": return { time: 100, reward: 0 };
+    case "dirt": return { time: 100, reward: 1 };
     case "ore": return { time: 1000, reward: 1 };
     case "gold": return { time: 2000, reward: 1 };
     default: return { time: 1000, reward: 0 };
