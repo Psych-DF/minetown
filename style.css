@@ -134,7 +134,7 @@ background-color: lime;
 }
 
 .tile.mined[data-type="ore"] {
-  background-color: #1a7;
+  background-color: #ff870f;
 }
 
 .tile.mined[data-type="stone"] {
