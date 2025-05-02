@@ -60,6 +60,7 @@ body {
 }
 
 .mining {
+background-color: orange;
   animation: pulse 0.5s infinite alternate;
 }
 
