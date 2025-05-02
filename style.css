@@ -115,6 +115,10 @@ background-color: lime;
   background-color: #4d4343;
 }
 
+.tile[data-type="rock"] {
+  background-color: #4d4243;
+}
+
 /* AFTER MINING CODE */
 
 .tile.mined[data-type="diamond"] {
