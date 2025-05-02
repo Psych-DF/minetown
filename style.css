@@ -168,5 +168,5 @@ background-color: lime;
   pointer-events: none; /* ensures it doesn't block mouse input */
   z-index: 1000;
 
-  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 60%, rgba(0,0,0,0.4) 100%);
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 60%, rgba(0,0,0,10) 100%);
 }
