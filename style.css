@@ -49,7 +49,9 @@ body {
 
 .player {
   background: lime;
-  z-index: 20;
+  outline: 1px solid lime;
+  box-shadow: 0 0 4px 2px lime;
+  z-index: 10; /* doesn't affect layout since you're not nesting */
 }
 
 .mined {
