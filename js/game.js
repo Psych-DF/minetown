@@ -2,7 +2,7 @@
 import { createGrid } from './grid.js';
 import { player } from './player.js';
 import { mineTile } from './mining.js';
-import { gridSize } from './grid.js';
+import { gridWidth, gridHeight } from './grid.js';
 
 let mineTimeout = null;
 
