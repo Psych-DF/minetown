@@ -48,9 +48,9 @@ body {
 }
 
 .player {
-  background: white;
-  outline: 1px solid white;
-  box-shadow: 0 0 4px 2px white;
+  background: black;
+  outline: 1px solid black;
+  box-shadow: 0 0 4px 2px black;
   z-index: 10; /* doesn't affect layout since you're not nesting */
 }
 
