@@ -81,3 +81,16 @@ background-color: lime;
   color: #4dd;
   font-family: monospace;
 }
+/* NEW TILE COLOUR CODE */
+.tile[data-type="dirt"] {
+  background-color: #444;
+}
+
+.tile[data-type="ore"] {
+  background-color: #4dd;
+}
+
+.tile[data-type="gold"] {
+  background: linear-gradient(135deg, gold, orange);
+  border: 1px solid #ffcc00;
+}
