@@ -58,7 +58,16 @@ body {
   background: #222;
   z-index: 10;
 }
-/**/
+
+.mining {
+  animation: pulse 0.5s infinite alternate;
+}
+
+@keyframes pulse {
+  from { filter: brightness(1); }
+  to   { filter: brightness(1.5); }
+}
+/* UI HUD */
 #hud {
   position: fixed;
   top: 10px;
