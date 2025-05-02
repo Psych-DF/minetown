@@ -25,12 +25,15 @@ export function mineTile(x, y) {
       tile.classList.remove("mining");
       tile.classList.add("mined");
 
-  if (type === "gold") {
+if (type === "gold") {
   player.gold += reward;
   document.getElementById("gold-count").textContent = player.gold;
-} else {
+} else if (type === "ore") {
   player.ore += reward;
   document.getElementById("ore-count").textContent = player.ore;
+} else if (type === "dirt") {
+  player.dirt += reward;
+  document.getElementById("dirt-count").textContent = player.dirt;
 }
 
       console.log(`Mined ${type}. +${reward} ${type === "gold" ? "gold" : "ore"}.`);
