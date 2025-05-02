@@ -8,9 +8,10 @@ body {
 #game-wrapper {
   width: 100vw;
   height: 100vh;
-  overflow: scroll;
+  overflow: auto;
   scrollbar-width: none;        /* Firefox */
   -ms-overflow-style: none;     /* IE 10+ */
+  position: relative;
 }
 
 #game-wrapper::-webkit-scrollbar {
@@ -23,10 +24,12 @@ body {
   grid-template-columns: repeat(150, 16px);
   grid-template-rows: repeat(50, 16px);
   gap: 1px;
-  margin: 0 auto;
-  margin-top: 20px;
+  /* REMOVE these two lines 👇 */
+  /* margin: 0 auto;
+  margin-top: 20px; */
   width: fit-content;
 }
+
 
 
 .tile {
