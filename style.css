@@ -60,8 +60,8 @@ body {
 }
 
 .mining {
-background-color: orange;
-  animation: pulse 0.5s infinite alternate;
+background-color: lime;
+  animation: pulse 0.1s infinite alternate;
 }
 
 @keyframes pulse {
