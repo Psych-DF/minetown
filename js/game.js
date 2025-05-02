@@ -88,7 +88,7 @@ function handleKeyDown(e) {
     movePlayer(heldDirection); // 👈 move once immediately
     moveInterval = setInterval(() => {
       movePlayer(heldDirection);
-    }, 150); // then continue stepping
+    }, 300); // then continue stepping
   }
 
   // Mining still works
