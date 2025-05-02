@@ -46,7 +46,7 @@ function handleKeyDown(e) {
     case "ArrowRight":
       if (player.x < gridSize - 1) player.x++;
       break;
-    case "Enter":
+    case " ":
       if (!mineTimeout) {
         mineTimeout = setTimeout(() => {
           mineTile(player.x, player.y);
@@ -60,7 +60,7 @@ function handleKeyDown(e) {
 }
 
 function handleKeyUp(e) {
-  if (e.key === "Enter" && mineTimeout) {
+  if (e.key === " " && mineTimeout) {
     clearTimeout(mineTimeout);
     mineTimeout = null;
   }
