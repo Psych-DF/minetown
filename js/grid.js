@@ -8,19 +8,22 @@ export const gridHeight = 500;
 export function createGrid(container) {
   for (let y = 0; y < gridHeight; y++) {
     for (let x = 0; x < gridWidth; x++) {
+      const type = getRandomTileType();
+
+      // Skip creating the tile if it's void
+      if (type === "void") {
+        grid.push(null); // still reserve space in grid
+        continue;
+      }
+
       const tile = document.createElement("div");
       tile.classList.add("tile");
       tile.dataset.x = x;
       tile.dataset.y = y;
-      tile.dataset.type = getRandomTileType();
+      tile.dataset.type = type;
       tile.dataset.mined = "false";
       container.appendChild(tile);
       grid.push(tile);
     }
   }
-}
-
-export function getTile(x, y) {
-  const index = y * gridWidth + x;
-  return grid[index];
 }
