@@ -54,8 +54,6 @@ function centerCameraOnPlayer() {
 let moveInterval = null;
 let heldDirection = null;
 
-import { getTile } from './grid.js'; // Make sure this import exists
-
 function movePlayer(key) {
   let newX = player.x;
   let newY = player.y;
