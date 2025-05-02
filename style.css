@@ -7,13 +7,14 @@ body {
 
 #game {
   display: grid;
-  grid-template-columns: repeat(40, 16px);
-  grid-template-rows: repeat(40, 16px);
+  grid-template-columns: repeat(150, 16px);
+  grid-template-rows: repeat(50, 16px);
   gap: 1px;
   margin: 0 auto;
   margin-top: 20px;
   width: fit-content;
 }
+
 
 .tile {
   width: 16px;
