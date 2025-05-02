@@ -48,6 +48,8 @@ body {
 
 .player {
   background: lime;
+  position: relative;
+  z-index: 10;
 }
 
 .mined {
