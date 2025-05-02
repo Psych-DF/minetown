@@ -116,7 +116,7 @@ background-color: lime;
 }
 
 .tile[data-type="rock"] {
-  background-color: #4d4243;
+  background-color: #272121;
 }
 
 /* AFTER MINING CODE */
@@ -153,3 +153,6 @@ background-color: lime;
   background-color: #5f4d46;
 }
 
+.tile.mined[data-type="rock"] {
+  background-color: #272121;
+}
