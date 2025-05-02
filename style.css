@@ -84,35 +84,35 @@ background-color: lime;
 /* BEFORE MINING CODE */
 
 .tile[data-type="diamond"] {
-  background-color: #614d4d;
+  background-color: #423535;
 }
 
 .tile[data-type="gold"] {
-  background-color: #614d4d;
+  background-color: #403333;
 }
 
 .tile[data-type="silver"] {
-  background-color: #614d4d;
+  background-color: #3c3030;
 }
 
 .tile[data-type="ore"] {
-  background-color: #614d4d;
+  background-color: #3f3434;
 }
 
 .tile[data-type="stone"] {
-  background-color: #614d4d;
+  background-color: #433a3a;
 }
 
 .tile[data-type="clay"] {
-  background-color: #e836e8; /* test pink */
+  background-color: #4d4141;
 }
 
 .tile[data-type="bone"] {
-  background-color: #614d4d;
+  background-color: #483e3e;
 }
 
 .tile[data-type="dirt"] {
-  background-color: #614d4d;
+  background-color: #4d4343;
 }
 
 /* AFTER MINING CODE */
