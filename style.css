@@ -83,15 +83,15 @@ background-color: lime;
 }
 /* BEFORE MINING CODE */
 .tile[data-type="dirt"] {
-  background-color: #d5d5d5;
+  background-color: #614d4d;
 }
 
 .tile[data-type="ore"] {
-  background-color: #d5d5d5;
+  background-color: #614d4d;
 }
 
 .tile[data-type="gold"] {
-  background-color: #d5d5d5;
+  background-color: #614d4d;
 }
 /* AFTER MINING CODE */
 .tile.mined[data-type="dirt"] {
