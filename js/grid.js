@@ -6,8 +6,8 @@ export const gridWidth = 150;
 export const gridHeight = 50;
 
 export function createGrid(container) {
-  for (let y = 0; y < gridSize; y++) {
-    for (let x = 0; x < gridSize; x++) {
+  for (let y = 0; y < gridHeight; y++) {
+    for (let x = 0; x < gridWidth; x++) {
       const tile = document.createElement("div");
       tile.classList.add("tile");
       tile.dataset.x = x;
