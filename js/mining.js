@@ -20,7 +20,9 @@ export function mineTile(x, y) {
   if (!tile || tile.dataset.mined === "true") return;
 
   const type = tile.dataset.type;
+  /* LOG */
   console.log("Mining tile type:", type);
+  /* LOG */
   const { time, reward } = getMiningProperties(type);
 
   tile.classList.add("mining");
