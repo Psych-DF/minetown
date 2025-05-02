@@ -4,5 +4,6 @@ export const player = {
   y: 0,
   ore: 0,
   gold: 0,
+  dirt: 0,
 };
 
