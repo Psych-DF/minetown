@@ -1,24 +1,27 @@
 // js/mining.js
-import { player } from './player.js';
 import { getTile } from './grid.js';
-/**/
+import { player } from './player.js';
+
 export function mineTile(x, y) {
   const tile = getTile(x, y);
-  if (tile.dataset.mined === "true") return;
+  if (!tile || tile.dataset.mined === "true") return;
 
-  tile.dataset.mined = "true";
-  tile.classList.add("mined");
+  const type = tile.dataset.type;
+  const { time, reward } = getMiningProperties(type);
 
-  const tileType = tile.dataset.type;
+  // Start delayed mining
+  tile.classList.add("mining");
+  setTimeout(() => {
+    tile.dataset.mined = "true";
+    tile.classList.remove("mining");
+    tile.classList.add("mined");
 
-  if (tileType === "ore") {
-    player.ore += 1;
-    tile.style.background = "#4dd";
+    player.ore += reward;
     document.getElementById("ore-count").textContent = player.ore;
-    console.log("Mined ore! Total:", player.ore);
-  } else {
-    tile.style.background = "#222";
-  }
+
+    console.log(`Mined ${type}. +${reward} ore.`);
+  }, time);
+}
 function getMiningProperties(type) {
   switch (type) {
     case "dirt":
