@@ -33,28 +33,28 @@ function updatePlayerPosition() {
 function handleKeyDown(e) {
   if (e.repeat) return;
 
-  switch (e.key) {
-    case "ArrowUp":
-      if (player.y > 0) player.y--;
-      break;
-    case "ArrowDown":
-      if (player.y < gridSize - 1) player.y++;
-      break;
-    case "ArrowLeft":
-      if (player.x > 0) player.x--;
-      break;
-    case "ArrowRight":
-      if (player.x < gridSize - 1) player.x++;
-      break;
-    case " ":
-      if (!mineTimeout) {
-        mineTimeout = setTimeout(() => {
-          mineTile(player.x, player.y);
-          mineTimeout = null;
-        }, 1000);
-      }
-      break;
-  }
+switch (e.key) {
+  case "ArrowUp":
+    if (player.y > 0) player.y--;
+    break;
+  case "ArrowDown":
+    if (player.y < gridHeight - 1) player.y++;
+    break;
+  case "ArrowLeft":
+    if (player.x > 0) player.x--;
+    break;
+  case "ArrowRight":
+    if (player.x < gridWidth - 1) player.x++;
+    break;
+  case " ":
+    if (!mineTimeout) {
+      mineTimeout = setTimeout(() => {
+        mineTile(player.x, player.y);
+        mineTimeout = null;
+      }, 1000);
+    }
+    break;
+}
 
   updatePlayerPosition();
 }
