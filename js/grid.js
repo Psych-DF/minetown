@@ -25,9 +25,12 @@ export function createGrid(container) {
       container.appendChild(tile);
       grid.push(tile);
     }
+  }
+}
+
+// ✅ This must be outside the createGrid function
 export function getTile(x, y) {
   if (x < 0 || x >= gridWidth || y < 0 || y >= gridHeight) return null;
   const index = y * gridWidth + x;
   return grid[index] || null;
-  }
 }
