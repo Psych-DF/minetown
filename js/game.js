@@ -56,8 +56,9 @@ switch (e.key) {
     break;
 }
 
-  updatePlayerPosition();
-}
+updatePlayerPosition();
+centerCameraOnPlayer();
+
 
 function handleKeyUp(e) {
   if (e.key === " " && mineTimeout) {
@@ -65,3 +66,5 @@ function handleKeyUp(e) {
     mineTimeout = null;
   }
 }
+
+
