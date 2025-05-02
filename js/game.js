@@ -44,20 +44,29 @@ function centerCameraOnPlayer() {
   }
 }
 
+/* PLAYER MOVEMENT CONTROLS */
 function handleKeyDown(e) {
   if (e.repeat) return;
 
   switch (e.key) {
     case "ArrowUp":
+        case "w":
+        case "W":
       if (player.y > 0) player.y--;
       break;
     case "ArrowDown":
+        case "s":
+        case "S":
       if (player.y < gridHeight - 1) player.y++;
       break;
     case "ArrowLeft":
+        case "a":
+        case "A":
       if (player.x > 0) player.x--;
       break;
     case "ArrowRight":
+        case "d":
+        case "D":
       if (player.x < gridWidth - 1) player.x++;
       break;
     case " ":
