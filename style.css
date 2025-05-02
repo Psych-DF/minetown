@@ -9,9 +9,12 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: scroll;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE 10+ */
+}
+
+#game-wrapper::-webkit-scrollbar {
+  display: none;                /* Chrome, Safari */
 }
 
 
