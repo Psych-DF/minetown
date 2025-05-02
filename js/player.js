@@ -10,5 +10,6 @@ export const player = {
   clay: 0,
   bone: 0,
   dirt: 0,
+  rock: 0,
 };
 
