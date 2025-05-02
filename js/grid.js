@@ -2,8 +2,8 @@
 import { getRandomTileType } from './tileTypes.js';
 
 export const grid = [];
-export const gridWidth = 150;
-export const gridHeight = 50;
+export const gridWidth = 500;
+export const gridHeight = 500;
 
 export function createGrid(container) {
   for (let y = 0; y < gridHeight; y++) {
