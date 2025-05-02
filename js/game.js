@@ -54,29 +54,42 @@ function centerCameraOnPlayer() {
 let moveInterval = null;
 let heldDirection = null;
 
+import { getTile } from './grid.js'; // Make sure this import exists
+
 function movePlayer(key) {
+  let newX = player.x;
+  let newY = player.y;
+
   switch (key) {
     case "arrowup":
     case "w":
-      if (player.y > 0) player.y--;
+      newY--;
       break;
     case "arrowdown":
     case "s":
-      if (player.y < gridHeight - 1) player.y++;
+      newY++;
       break;
     case "arrowleft":
     case "a":
-      if (player.x > 0) player.x--;
+      newX--;
       break;
     case "arrowright":
     case "d":
-      if (player.x < gridWidth - 1) player.x++;
+      newX++;
       break;
   }
 
+  const nextTile = getTile(newX, newY);
+  if (!nextTile || nextTile.dataset.type === "rock") return; // ⛔️ Block movement
+
+  player.x = newX;
+  player.y = newY;
   updatePlayerPosition();
   centerCameraOnPlayer();
 }
+
+
+/* PLAYER HOLD BUTTON MOVEMENT CONTROLS */
 
 function handleKeyDown(e) {
   const key = e.key.toLowerCase();
