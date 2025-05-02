@@ -21,6 +21,6 @@ export function createGrid(container) {
 }
 
 export function getTile(x, y) {
-  const index = y * gridSize + x;
+  const index = y * gridWidth + x;
   return grid[index];
 }
