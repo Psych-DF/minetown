@@ -81,7 +81,7 @@ background-color: lime;
   color: #4dd;
   font-family: monospace;
 }
-/* NEW TILE COLOUR CODE */
+/* BEFORE MINING CODE */
 .tile[data-type="dirt"] {
   background-color: #444;
 }
@@ -94,3 +94,17 @@ background-color: lime;
   background: linear-gradient(135deg, gold, orange);
   border: 1px solid #ffcc00;
 }
+/* AFTER MINING CODE */
+.tile.mined[data-type="dirt"] {
+  background-color: #222;
+}
+
+.tile.mined[data-type="ore"] {
+  background-color: #1a7;
+}
+
+.tile.mined[data-type="gold"] {
+  background-color: #773;
+  border-color: #aa7700;
+}
+
