@@ -5,7 +5,7 @@ function getMiningProperties(type) {
   switch (type) {
     case "dirt": return { time: 500, reward: 0 };
     case "ore": return { time: 1000, reward: 1 };
-    case "gold": return { time: 2000, reward: 5 };
+    case "gold": return { time: 2000, reward: 1 };
     default: return { time: 1000, reward: 0 };
   }
 }
