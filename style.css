@@ -83,16 +83,15 @@ background-color: lime;
 }
 /* BEFORE MINING CODE */
 .tile[data-type="dirt"] {
-  background-color: #444;
+  background-color: #d5d5d5;
 }
 
 .tile[data-type="ore"] {
-  background-color: #4dd;
+  background-color: #d5d5d5;
 }
 
 .tile[data-type="gold"] {
-  background: linear-gradient(135deg, gold, orange);
-  border: 1px solid #ffcc00;
+  background-color: #d5d5d5;
 }
 /* AFTER MINING CODE */
 .tile.mined[data-type="dirt"] {
@@ -104,7 +103,7 @@ background-color: lime;
 }
 
 .tile.mined[data-type="gold"] {
-  background-color: #773;
-  border-color: #aa7700;
+  background: linear-gradient(135deg, gold, orange);
+  border: 1px solid #ffcc00;
 }
 
