@@ -104,7 +104,7 @@ background-color: lime;
 }
 
 .tile[data-type="clay"] {
-  background-color: #e836e8;
+  background-color: #e836e8; /* test pink */
 }
 
 .tile[data-type="bone"] {
