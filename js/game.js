@@ -23,11 +23,18 @@ export function initGame() {
   document.addEventListener("keydown", handleKeyDown);
   document.addEventListener("keyup", handleKeyUp);
 }
-
+/* PLAYER POSITION & LAYERING START */
 function updatePlayerPosition() {
-  document.querySelectorAll(".player").forEach((el) => el.classList.remove("player"));
+  // Remove all existing .player overlays
+  document.querySelectorAll(".player").forEach(el => el.remove());
+
+  // Add player overlay to current tile
   const tile = document.querySelector(`.tile[data-x="${player.x}"][data-y="${player.y}"]`);
-  if (tile) tile.classList.add("player");
+  if (tile) {
+    const playerDiv = document.createElement("div");
+    playerDiv.classList.add("player");
+    tile.appendChild(playerDiv);
+  }
 }
 
 function centerCameraOnPlayer() {
@@ -40,6 +47,8 @@ function centerCameraOnPlayer() {
     });
   }
 }
+/* PLAYER POSITION & LAYERING END */
+
 
 function handleKeyDown(e) {
   if (e.repeat) return;
