@@ -82,7 +82,16 @@ background-color: lime;
   font-family: monospace;
 }
 /* BEFORE MINING CODE */
-.tile[data-type="dirt"] {
+
+.tile[data-type="diamond"] {
+  background-color: #614d4d;
+}
+
+.tile[data-type="gold"] {
+  background-color: #614d4d;
+}
+
+.tile[data-type="silver"] {
   background-color: #614d4d;
 }
 
@@ -90,19 +99,53 @@ background-color: lime;
   background-color: #614d4d;
 }
 
-.tile[data-type="gold"] {
+.tile[data-type="stone"] {
   background-color: #614d4d;
 }
+
+.tile[data-type="clay"] {
+  background-color: #614d4d;
+}
+
+.tile[data-type="bone"] {
+  background-color: #614d4d;
+}
+
+.tile[data-type="dirt"] {
+  background-color: #614d4d;
+}
+
 /* AFTER MINING CODE */
-.tile.mined[data-type="dirt"] {
-  background-color: #222;
+
+.tile.mined[data-type="diamond"] {
+  background-color: #d0ffff;
+}
+
+.tile.mined[data-type="gold"] {
+  background: linear-gradient(135deg, gold, orange);
+}
+
+.tile.mined[data-type="silver"] {
+  background: linear-gradient(135deg, f8fefe, f0f0f0);
 }
 
 .tile.mined[data-type="ore"] {
   background-color: #1a7;
 }
 
-.tile.mined[data-type="gold"] {
-  background: linear-gradient(135deg, gold, orange);
+.tile.mined[data-type="stone"] {
+  background-color: #cdbebe;
+}
+
+.tile.mined[data-type="clay"] {
+  background-color: #e3ab76;
+}
+
+.tile.mined[data-type="bone"] {
+  background-color: #faf6d8;
+}
+
+.tile.mined[data-type="dirt"] {
+  background-color: #5f4d46;
 }
 
