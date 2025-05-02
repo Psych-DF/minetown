@@ -31,6 +31,7 @@ export function mineTile(x, y) {
     setTimeout(() => {
       tile.dataset.mined = "true";
       tile.classList.remove("mining");
+      tile.classList.remove(type);
       tile.classList.add("mined");
 
       // ✅ Dynamically update player stat and HUD based on tile type
