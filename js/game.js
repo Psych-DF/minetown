@@ -3,6 +3,7 @@ import { createGrid, gridWidth, gridHeight } from './grid.js';
 import { player } from './player.js';
 import { mineTile } from './mining.js';
 import { getTile } from './grid.js';
+import { findSpawnTile } from './player.js';
 
 
 let mineTimeout = null;
