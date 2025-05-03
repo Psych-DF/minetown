@@ -39,14 +39,13 @@ export function initGame() {
   player.dirt = 0;
   player.rock = 0;
 
-  oreDisplay.textContent = "0";
-  gameContainer.innerHTML = "";
+oreDisplay.textContent = "0";
+gameContainer.innerHTML = "";
 
-  createGrid(gameContainer);
-
-  findSpawnTile(); // 🧠 call the spawn logic here
-  updatePlayerPosition();
-  centerCameraOnPlayer();
+createGrid(gameContainer);
+findSpawnTile();
+updatePlayerPosition();
+centerCameraOnPlayer();
 
   document.addEventListener("keydown", handleKeyDown);
   document.addEventListener("keyup", handleKeyUp);
