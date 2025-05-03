@@ -9,13 +9,14 @@ let mineTimeout = null;
 
 /* PLAYER SPAWN LOGIC*/
 function findSpawnTile() {
-  const y = 50; // fixed row
-  for (let x = 0; x < gridWidth; x++) {
-    const tile = getTile(x, y);
-    if (tile && tile.dataset.type === "gold") {
-      player.x = x;
-      player.y = y;
-      return;
+  for (let y = 0; y < 100; y++) {
+    for (let x = 0; x < 500; x++) {
+      const tile = getTile(x, y);
+      if (tile && tile.dataset.type === "dirt") {
+        player.x = x;
+        player.y = y;
+        return;
+      }
     }
   }
 }
