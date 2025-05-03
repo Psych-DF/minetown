@@ -26,42 +26,28 @@ export function initGame() {
   const gameContainer = document.getElementById("game");
   const oreDisplay = document.getElementById("ore-count");
 
-
-
-
-  // Reset state
-  player.x = 20;
-  player.y = 0;
+  // Reset player state
+  player.diamond = 0;
+  player.gold = 0;
+  player.silver = 0;
   player.ore = 0;
+  player.stone = 0;
+  player.clay = 0;
+  player.bone = 0;
+  player.dirt = 0;
+  player.rock = 0;
+
   oreDisplay.textContent = "0";
   gameContainer.innerHTML = "";
 
   createGrid(gameContainer);
+
+  findSpawnTile(); // 🧠 call the spawn logic here
   updatePlayerPosition();
   centerCameraOnPlayer();
 
   document.addEventListener("keydown", handleKeyDown);
   document.addEventListener("keyup", handleKeyUp);
-}
-
-function updatePlayerPosition() {
-  // Remove old player marker
-  document.querySelectorAll(".player").forEach((el) => el.classList.remove("player"));
-
-  // Add .player class to the tile the player is on
-  const tile = document.querySelector(`.tile[data-x="${player.x}"][data-y="${player.y}"]`);
-  if (tile) tile.classList.add("player");
-}
-
-function centerCameraOnPlayer() {
-  const tile = document.querySelector(`.tile[data-x="${player.x}"][data-y="${player.y}"]`);
-  if (tile) {
-    tile.scrollIntoView({
-      behavior: "smooth",
-      block: "center",
-      inline: "center"
-    });
-  }
 }
 
 /* PLAYER MOVEMENT CONTROLS */
