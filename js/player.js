@@ -1,7 +1,7 @@
 // js/player.js
 export const player = {
-findSpawnTile();
-
+  x: 0,
+  y: 0,
   diamond: 0,
   gold: 0,
   silver: 0,
@@ -12,4 +12,3 @@ findSpawnTile();
   dirt: 0,
   rock: 0,
 };
-
