@@ -1,7 +1,7 @@
 // js/player.js
 export const player = {
-  x: 75, // middle of 150
-  y: 0,
+  x: 150, // middle of 150
+  y: 150,
   diamond: 0,
   gold: 0,
   silver: 0,
