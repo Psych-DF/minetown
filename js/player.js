@@ -1,4 +1,7 @@
 // js/player.js
+/* IMPORTS */
+import { getTile } from './grid.js';
+/* IMPORTS */
 export const player = {
   x: 0,
   y: 0,
